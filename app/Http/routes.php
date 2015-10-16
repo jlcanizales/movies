@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+	"as" => "index",
+	"uses" => "MoviesController@index"
+]);
+Route::post('/search', [
+	"as" => "search",
+	"uses" => "MoviesController@search"
+]);
