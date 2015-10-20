@@ -1,3 +1,23 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+body{
+	background: url(../imgs/bg.png);
+	.container{
+		margin-top: 50px;
+		.actor{
+			background: rgba(128, 128, 128, 0.2);
+			margin-top: 20px;
+			.photo{
+				width: 100%;
+			}
+		}
+		.movie{
+			background: rgba(128, 128, 128, 0.2);
+			margin-top: 20px;
+			.photo{
+				width: 100%;
+			}
+		}	
+	}
+}
 
 

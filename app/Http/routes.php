@@ -19,3 +19,7 @@ Route::post('/search', [
 	"as" => "search",
 	"uses" => "MoviesController@search"
 ]);
+Route::get('/actor/{id}', [
+	"as" => "actor",
+	"uses" => "MoviesController@getActor"
+]);
