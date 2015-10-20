@@ -9,7 +9,10 @@
 			<p class="text-center">Search for an actor by name:</p>
 			{!! Form::open(array('url' => '/search', 'id'=>'movies-form')) !!}
 				<div class="form-group">
-					{!! Form::text('name', null, array("placeholder"=>"Name","class"=>"form-control")); !!}
+					@if(Session::has("error"))
+						<p class="text-center text-danger">{{Session::get("error")}}</p>
+					@endif
+					{!! Form::text('name', null, array("placeholder"=>"Name","class"=>"form-control","required"=>"required")); !!}
 				</div>
 				<div class="form-group text-center">
 					{!! Form::submit('Search',array("class"=>"btn btn-default")); !!}
