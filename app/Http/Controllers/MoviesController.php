@@ -19,6 +19,9 @@ class MoviesController extends Controller
     public function search(Request $request)
     {
         $name =  $request->input("name");
+        if($name==""){
+                return redirect()->back()->with('error', "You sould search an actor for a name");
+        }
         $url=html_entity_decode("http://api.themoviedb.org/3/search/person?");
         $options = array("api_key"=>"af5b30b8759307d572388fceb9fa4331","query"=>$name,"sort_by"=>"release_date.asc");
         $url .= http_build_query($options,'','&');
